@@ -1,19 +1,13 @@
 import React from 'react'
 import { useRouter } from 'next/router'
-const style={
-  wrapper:`w-min flex items-center rounded-[100px] p-4 cursor-pointer hover:bg-[#333c45] transition-all hover:duration-200 hover:ease-in-out`,
-  iconContainer:`text-xl mr-4`,
-  textContainer:`font-medium`,
-  textGeneral:`font-medium`,
-  textActive:`font-bold`
+const style = {
+  wrapper: `w-min flex items-center rounded-[100px] p-4 cursor-pointer hover:bg-[#333c45] transition-all hover:duration-200 hover:ease-in-out`,
+  iconContainer: `text-xl mr-4`,
+  textContainer: `font-medium`,
+  textGeneral: `font-medium`,
+  textActive: `font-bold`,
 }
-const SidebarOption = ({
-  text,
-  Icon,
-  isActive,
-  setSelected,
-  redirect
-}) => {
+const SidebarOption = ({ text, Icon, isActive, setSelected, redirect }) => {
   const router = useRouter()
 
   const handleClick = (buttonText = text) => {
@@ -21,14 +15,12 @@ const SidebarOption = ({
       setSelected(buttonText)
     } else return
   }
-  console.log(redirect)
   return (
     <div
       className={style.wrapper}
-
       onClick={() => {
         handleClick(text)
-        if (redirect ) {
+        if (redirect) {
           router.push(redirect)
         } else return
       }}
