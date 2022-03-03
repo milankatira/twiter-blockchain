@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import SidebarOption from './SidebarOption'
+import Link from 'next/link'
 import { VscTwitter } from 'react-icons/vsc'
 import { RiHome7Line, RiHome7Fill, RiFileList2Fill } from 'react-icons/ri'
 import { BiHash } from 'react-icons/bi'
